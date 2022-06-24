@@ -1,13 +1,10 @@
 package com.example.ui
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import com.example.domain.Text
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.Flow
 
-open class TextsViewModel(
-    private val textsReducer: TextsReducer
-)  : ViewModel(), Texts by textsReducer{
-    init {
-        textsReducer.loadTexts(viewModelScope)
-    }
+interface TextsViewModel {
+    val texts: Flow<List<Text>>
+    fun loadTexts(scope: CoroutineScope)
 }
-

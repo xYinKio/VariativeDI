@@ -24,7 +24,7 @@ open class TextsFragment : Fragment(R.layout.layout_texts) {
     }
 
     protected open fun viewModel() : TextsViewModel {
-        val vm: TextsViewModel by viewModels()
+        val vm: TextsViewModelImpl by viewModels()
         return vm
     }
 

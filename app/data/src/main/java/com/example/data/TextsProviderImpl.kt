@@ -17,8 +17,3 @@ internal class TextsProviderImpl : TextsProvider {
     }
 }
 
-object DataModule{
-    fun provideTextsProvider() : TextsProvider {
-        return TextsProviderImpl()
-    }
-}

@@ -9,13 +9,14 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class TextsReducer constructor(
+internal class TextsViewModelDelegate constructor(
     private val getTextUseCase: GetTextUseCase,
-) : Texts {
+
+) : TextsViewModel {
     private val _texts = MutableStateFlow<List<Text>>(listOf())
     override val texts: Flow<List<Text>> = _texts.asStateFlow()
 
-    fun loadTexts(scope: CoroutineScope){
+    override fun loadTexts(scope: CoroutineScope){
         scope.launch(Dispatchers.IO) {
             _texts.value = getTextUseCase.getText()
         }

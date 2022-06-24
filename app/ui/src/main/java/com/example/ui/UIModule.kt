@@ -4,7 +4,7 @@ import com.example.domain.GetTextUseCase
 
 object UIModule {
 
-    fun provideTextsReducer(getTextUseCase: GetTextUseCase) : TextsReducer {
-        return TextsReducer(getTextUseCase)
+    fun provideTextsViewModelDelegate(getTextUseCase: GetTextUseCase) : TextsViewModel {
+        return TextsViewModelDelegate(getTextUseCase)
     }
 }
