@@ -3,13 +3,10 @@ package com.example.variativedi
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ui.TextsFragment
 import com.example.variativedi.databinding.ActivityMainBinding
-import com.example.ui.UIModule
-import com.example.variativedi.hilt.HiltTextsFragment
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+internal class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -19,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
 
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.add(R.id.fragmentContainer, HiltTextsFragment())
+        transaction.add(R.id.fragmentContainer, DaggerTextsFragment())
         transaction.commit()
 
         setContentView(binding.root)

@@ -1,4 +1,4 @@
-package com.example.variativedi.di
+package com.example.variativedi
 
 import com.example.data.DataModule
 import com.example.domain.DomainModule
@@ -7,11 +7,9 @@ import com.example.ui.TextsViewModel
 import com.example.ui.UIModule
 import dagger.Module
 import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
+import javax.inject.Named
 
 @Module
-@InstallIn(SingletonComponent::class)
 internal class AppModule {
     @Provides
     fun provideGetTextsUseCase() : GetTextUseCase {
@@ -20,7 +18,7 @@ internal class AppModule {
     }
 
     @Provides
-    fun provideTextsReducer(getTextUseCase: GetTextUseCase) : TextsViewModel {
-        return UIModule.provideTextsViewModelDelegate(getTextUseCase)
+    fun provideTextsViewModelDelegate(getTextUseCase: GetTextUseCase) : TextsViewModel {
+        return  UIModule.provideTextsViewModelDelegate(getTextUseCase)
     }
 }

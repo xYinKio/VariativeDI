@@ -5,6 +5,7 @@ import com.example.domain.TextsProvider
 
 internal class TextsProviderImpl : TextsProvider {
 
+
     override fun getTexts(): List<Text> {
         return listOf(
             Text("One"),
