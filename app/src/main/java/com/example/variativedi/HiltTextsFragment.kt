@@ -1,4 +1,4 @@
-package com.example.variativedi.hilt
+package com.example.variativedi
 
 import androidx.fragment.app.viewModels
 import com.example.ui.TextsFragment

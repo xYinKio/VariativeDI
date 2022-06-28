@@ -1,4 +1,4 @@
-package com.example.variativedi.hilt
+package com.example.variativedi
 
 import com.example.ui.TextsViewModel
 import com.example.ui.TextsViewModelImpl

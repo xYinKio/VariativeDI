@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import com.example.variativedi.databinding.ActivityMainBinding
-import com.example.ui.UIModule
-import com.example.variativedi.hilt.HiltTextsFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

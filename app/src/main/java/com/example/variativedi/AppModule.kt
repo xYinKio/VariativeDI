@@ -1,4 +1,4 @@
-package com.example.variativedi.di
+package com.example.variativedi
 
 import com.example.data.DataModule
 import com.example.domain.DomainModule
